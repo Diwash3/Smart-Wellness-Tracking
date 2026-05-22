@@ -1,0 +1,20 @@
+<svg width="700" height="520" viewBox="0 0 700 520" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="700" height="520" rx="36" fill="#020617"/>
+  <circle cx="110" cy="90" r="80" fill="#22C55E" opacity="0.18"/>
+  <circle cx="595" cy="400" r="120" fill="#38BDF8" opacity="0.13"/>
+  <rect x="70" y="80" width="560" height="360" rx="28" fill="#111827" stroke="#1F2937"/>
+  <rect x="105" y="118" width="190" height="72" rx="18" fill="#0F172A" stroke="#22C55E" opacity="0.95"/>
+  <rect x="325" y="118" width="270" height="72" rx="18" fill="#0F172A" stroke="#38BDF8" opacity="0.95"/>
+  <rect x="105" y="220" width="230" height="170" rx="20" fill="#0F172A" stroke="#1F2937"/>
+  <rect x="365" y="220" width="230" height="170" rx="20" fill="#0F172A" stroke="#1F2937"/>
+  <path d="M126 315 C160 270, 190 350, 224 296 C252 253, 280 315, 315 275" stroke="#22C55E" stroke-width="7" stroke-linecap="round"/>
+  <path d="M390 315 C430 250, 465 340, 505 285 C535 245, 555 275, 578 245" stroke="#38BDF8" stroke-width="7" stroke-linecap="round"/>
+  <text x="125" y="162" fill="#E5E7EB" font-family="Arial" font-size="24" font-weight="700">Habits</text>
+  <text x="345" y="162" fill="#E5E7EB" font-family="Arial" font-size="24" font-weight="700">Health Dashboard</text>
+  <circle cx="170" cy="350" r="10" fill="#22C55E"/>
+  <circle cx="452" cy="350" r="10" fill="#38BDF8"/>
+  <rect x="132" y="252" width="160" height="12" rx="6" fill="#334155"/>
+  <rect x="132" y="252" width="110" height="12" rx="6" fill="#22C55E"/>
+  <rect x="392" y="252" width="160" height="12" rx="6" fill="#334155"/>
+  <rect x="392" y="252" width="130" height="12" rx="6" fill="#38BDF8"/>
+</svg>

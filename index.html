@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Personal Wellness & Habit Monitoring System</title>
+  <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css" />
+  <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hero" id="home">
+    <div class="hero-text">
+      <p class="eyebrow">Fittness and Wellness monitoring</p>
+      <h1 class="fade-in">Smart Personal Wellness & Habit Monitoring System</h1>
+      <p class="fade-in-delay">Track habits, enter health readings, and view wellness trends in one simple dashboard.</p>
+      <a href="#habits" class="primary-btn pulse">Get Started</a>
+    </div>
+    <div class="hero-image float">
+      <img src="assets/hero.svg" alt="Wellness dashboard illustration" />
+    </div>
+  </header>
+
+  <nav class="top-nav">
+    <a href="#dashboard">Dashboard</a>
+    <a href="#habits">Habits</a>
+    <a href="#log">Log</a>
+    <a href="#health">Health</a>
+    <a href="#reports">Reports</a>
+    <a href="#about">About</a>
+  </nav>
+
+  <main>
+    <section id="dashboard" class="card reveal">
+      <h2>Today’s Overview</h2>
+      <div class="stats-grid">
+        <div class="stat-box"><span>Date</span><strong id="today-date">--</strong></div>
+        <div class="stat-box"><span>Habits Completed</span><strong id="today-habits-summary">0 / 0</strong></div>
+        <div class="stat-box"><span>Blood Pressure</span><strong id="today-bp">--</strong></div>
+        <div class="stat-box"><span>Heart Rate</span><strong id="today-hr">--</strong></div>
+        <div class="stat-box"><span>Steps</span><strong id="today-steps">--</strong></div>
+      </div>
+    </section>
+
+    <section id="habits" class="card reveal">
+      <h2>Habit Manager</h2>
+      <div class="form-row">
+        <input id="habit-name" type="text" placeholder="Habit name, e.g., Exercise" />
+        <select id="habit-category">
+          <option value="Health">Health</option>
+          <option value="Study">Study</option>
+          <option value="Personal">Personal</option>
+          <option value="Fitness">Fitness</option>
+        </select>
+        <button class="primary-btn" py-click="add_habit">Add Habit</button>
+      </div>
+      <div id="habit-list" class="list-box"></div>
+    </section>
+
+    <section id="log" class="card reveal">
+      <h2>Log Today’s Habits</h2>
+      <p>Select completed habits for <strong id="log-date">--</strong>:</p>
+      <div id="log-habits-container" class="checkbox-list"></div>
+      <button class="primary-btn" py-click="save_today_log">Save Log</button>
+    </section>
+
+    <section id="health" class="card reveal">
+      <h2>Health Monitoring Prototype</h2>
+      <p class="muted">This section supports manual entries and prototype-style device monitoring. It is for demonstration, not medical advice.</p>
+
+      <div class="grid-2">
+        <div class="mini-card">
+          <h3>Blood Pressure</h3>
+          <input id="bp-systolic" type="number" placeholder="Systolic, e.g., 120" />
+          <input id="bp-diastolic" type="number" placeholder="Diastolic, e.g., 80" />
+          <button class="secondary-btn" py-click="add_bp_reading">Add BP Reading</button>
+          <p>Status: <strong id="bp-status">--</strong></p>
+          <canvas id="bpChart"></canvas>
+        </div>
+
+        <div class="mini-card">
+          <h3>Heart Rate</h3>
+          <input id="hr-value" type="number" placeholder="Heart Rate bpm" />
+          <button class="secondary-btn" py-click="add_hr_reading">Add HR Reading</button>
+          <p>Zone: <strong id="hr-zone">--</strong></p>
+          <canvas id="hrChart"></canvas>
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <div class="mini-card">
+          <h3>Sleep Tracking</h3>
+          <input id="sleep-hours" type="number" step="0.1" placeholder="Hours slept" />
+          <button class="secondary-btn" py-click="add_sleep_record">Add Sleep Record</button>
+          <p>Sleep score: <strong id="sleep-score">--</strong></p>
+          <canvas id="sleepChart"></canvas>
+        </div>
+
+        <div class="mini-card">
+          <h3>Steps / Activity</h3>
+          <input id="steps-value" type="number" placeholder="Steps today" />
+          <button class="secondary-btn" py-click="add_steps_record">Add Steps</button>
+          <p>Goal progress: <strong id="steps-progress">--</strong></p>
+          <canvas id="stepsChart"></canvas>
+        </div>
+      </div>
+
+      <div class="device-card">
+        <h3>Device Integration Concept</h3>
+        <p>Prototype simulation for future smartwatch or mobile health app integration.</p>
+        <button class="primary-btn glow" py-click="generate_mock_health_data">Connect Device / Generate Mock Data</button>
+        <span class="badge">Simulated</span>
+      </div>
+    </section>
+
+    <section id="reports" class="card reveal">
+      <h2>Reports & Analytics</h2>
+      <p>Habit completion percentage based on saved daily logs.</p>
+      <canvas id="habitChart"></canvas>
+    </section>
+
+    <section id="about" class="card reveal">
+      <h2>About This Project</h2>
+      <p>Log your exercises, review your stats, and keep your fitness journey on track—all in one place.</p>
+      <p><strong>Core working module:</strong> habit tracking. <strong>Supporting modules:</strong> BP, heart rate, sleep, steps, and mock device sync.</p>
+    </section>
+  </main>
+
+  <script src="charts.js"></script>
+  <script type="py" src="app.py"></script>
+</body>
+</html>
