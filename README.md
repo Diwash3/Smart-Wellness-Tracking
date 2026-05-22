@@ -1,8 +1,8 @@
 # Smart Personal Wellness & Habit Monitoring System
 
-A GitHub Pages friendly prototype built with HTML, CSS, PyScript, Chart.js, and localStorage.
+A GitHub Pages-friendly prototype built with HTML, CSS, PyScript, Chart.js, and localStorage.
 
-## Main features
+Main features
 - Add and manage habits
 - Log today's habit completion
 - Store data in browser localStorage
@@ -12,17 +12,10 @@ A GitHub Pages friendly prototype built with HTML, CSS, PyScript, Chart.js, and 
 
 ## Run locally
 1. Open this folder in VS Code.
-2. Install the **Live Server** extension.
-3. Right-click `index.html` and select **Open with Live Server**.
+2. Can be compiled using the Live server extension.
 
-You can also double-click `index.html`, but Live Server is recommended.
 
-## Host on GitHub Pages
-1. Create a GitHub repository named `smart-wellness-tracker`.
-2. Upload all files and folders.
-3. Go to **Settings → Pages**.
-4. Select **main branch** and **/root** folder.
-5. Open the GitHub Pages URL after deployment.
+Hosted on GitHub to view the initial prototype output.
 
-## Important note
+Note:
 This is a prototype project. Health data classifications are simple demonstrations and are not medical advice.
